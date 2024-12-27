@@ -25,6 +25,7 @@ int main(){
        Dog* D = new Dog();
        D->speak();
 
+       // upCasting
        Animal* A2 = new Dog();
        A2->speak();
        return 0;
