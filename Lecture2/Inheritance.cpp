@@ -11,15 +11,24 @@ class Animal{
        }     
 };
 
-class Dog:protected Animal{
+class Dog:public Animal{
        public:
+       void eat(){
+              cout << "Dog eat " << endl;
+       }
+
        void sleep(){
               cout << this->legs << endl;
        }
 }; 
 
 int main(){
-       Dog D1;
-       D1.sleep();
+       Animal* A1 = new Animal();
+       A1->eat();
+
+       Dog* D1 = new Dog();
+       D1->eat();
+       D1->legs = 4;
+       D1->sleep();
        return 0;
 }
